@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Work+Sans:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    color: white;
+    width: 100vw;
+    height: 16vh;
+    background-color: #bfbe99;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+
+}
+
+nav div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+nav,
+header,
+main {
+    width: 100vw;
+    padding: 0 8.33vw;
+}
+
+section {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    transition: all 0.3s ease;
+}
+
+section div {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+section div img {
+    width: 100%;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.email-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #212529;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.email-button:hover {
+    background-color: #bfbe99;
+    transition: all 0.3s ease;
+}
+
+.lightboxOverlay {
+    background-color: gray;
+}
+
+section div {
+    width: 100%;
+}
+
+section div img, video {
+    width: 100%;
+    grid-column: span 4;
+}
+
+header {
+    
+    height: 43vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+h1,
+header h3,
+nav a,
+header a {
+    line-height: 125%;
+}
+
+nav h1 {
+    font-weight: 500;
+}
+
+header h1 {
+    font-family: 'Crimson Text', serif;
+}
+
+header h3 {
+    margin-top: 200px;
+    text-transform: uppercase;
+    color: #bfbe99;
+    letter-spacing: 5px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+header a,
+nav a {
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header a {
+    background-color: #212529;
+}
+
+nav span {
+    display: none;
+}
+
+.icon-menu::before {
+    color: white;
+    font-size: 4vw;
+}
+
+span.icon-menu:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    nav div {
+        width: 50%;
+    }
+
+    main section {
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        height: auto;
+    }
+
+    section div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav div {
+        display: none;
+    }
+
+    nav span {
+        display: inline;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background: #bfbe99;
+    text-align: center;
+    margin-top: 20px;
+
+}
+@keyframes myAnimation {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animated-element {
+    animation: myAnimation 1s ease-in-out forwards;
+  }
+  
